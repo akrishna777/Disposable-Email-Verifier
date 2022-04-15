@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap');
+body{
+    background-image: url(/background.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+   
+}
+
+#section1{
+    background-color: tomato;
+    text-align: center;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+#section1 h1{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
+
+}
+
+#submitForm{
+    /* border: 1px solid white; */
+    padding: 30px;
+    border-radius: 20px;
+    width: 30%;
+    height: 40%;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+}
+
+.form-group input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid white;
+    border-radius: 0px;
+    background-color: transparent;
+
+}
+
+.btn{
+    background-color: rgba(0, 0, 0, 0.8);
+    border: none;
+    color: white;
+
+}
+.btn:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+    
+}
+
+
+#displayResults{
+    /* border: 1px solid white; */
+    padding: 30px;
+    border-radius: 20px;
+    width: 30%;
+    height: 40%;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    /* font-size: 25px; */
+}
+
+
+.comment{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInAnimation ease 3s;
+    animation-fill-mode: forwards;
+}
+.comment2{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInAnimation2 ease 3s;
+    animation-fill-mode: forwards;
+}
+
+
+#textinfo{
+    color: white;
+    font-size: 18px;
+    line-height: 1.8;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    width: 100%;
+
+}
+
+#image img{
+    width: 250px;
+    height: 300px;
+}
+
+#image {
+    width: auto;
+}
+
+@media (max-width: 767.98px){
+    #end{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #submitForm{
+        width: 90%
+
+    }
+    #displayResults{
+        width: 90%;
+    }
+    #image{
+        width: auto;
+    }
+    
+}
+
+
+
+
+
+
+/* Tick Mark Animation */
+.wrapper {
+    height: 16vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    flex-direction: column;
+}
+
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #7ac142;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards
+}
+
+.checkmark {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    /* margin: 10% auto; */
+    box-shadow: inset 0px 0px 0px #7ac142;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+    /* border: 2px solid black; */
+}
+
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards
+}
+
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0
+    }
+}
+
+@keyframes scale {
+
+    0%,
+    100% {
+        transform: none
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1)
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #7ac142
+    }
+}
+
+
+
+
+
+
+
+/* Cross Mark Animation */
+.wrapper2 {
+    height: 16vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    flex-direction: column;
+}
+.checkmark2 {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px #f1400b;
+    animation: fill2 .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both
+}
+
+
+.checkmark_circle2 {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #f1400b;
+    fill: none;
+    animation: stroke2 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards
+}
+
+.checkmark_check2 {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke2 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards
+}
+
+
+@keyframes fadeInAnimation2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+@keyframes stroke2 {
+    100% {
+        stroke-dashoffset: 0
+    }
+}
+
+@keyframes scale {
+
+    0%,
+    100% {
+        transform: none
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1)
+    }
+}
+
+@keyframes fill2 {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #f1400b
+    }
+}
